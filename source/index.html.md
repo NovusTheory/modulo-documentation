@@ -2,238 +2,255 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
   - javascript
-
-toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-
-includes:
-  - errors
 
 search: true
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+<aside class="notice">
+In order to have JavaScript commands you must talk to NovusTheory
+</aside>
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Welcome to the JavaScript API for Custom Commands in Modulo!
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+There is three key things you should know while you are programming custom commands for Modulo.
 
-# Authentication
+1. All scripts are reviewed before they are allowed to be in use.
+2. All scripts must abide by a [strict format](#script-rules).
 
-> To authorize, use this code:
+## FAQ
 
-```ruby
-require 'kittn'
+*Why are all scripts reviewed?*: **Although scripts are enabled by asking for it. All scripts must go under review to prevent malicious actions and follow a set of rules**
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+*Will reviewing ever be removed?*: **In the future reviewing of scripts might be removed when sandboxing and more restrictions have been put in place**
 
-```python
-import kittn
+# Formatting
 
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
+When programming custom commands, you must program to a specific format
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
+// You cannot have code above this line unless they are functions
+discord.OnCommand = ...;
+// You cannot have code below this line
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+The example code on the shown is how you should structure your code, otherwise it will be rejected for not following the formatting rules
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+# Discord
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+## Command Callback
 
-`Authorization: meowmeowmeow`
+```javascript
+discord.OnCommand = function(Message message, Array arguments) {
+
+};
+```
+
+You can connect to your command callback by assigning OnCommand to a function which will be called when your command is executed. A custom class [Message](#message) will be returned along with an array of arguments excluding the command itself will be passed.
+
+## Bots
+
+<aside class="warning">
+If this option is enabled you must check for messages by bots in your command, otherwise your script will be rejected
+</aside>
+
+By default all commands are not allowed to be run by bots. However, you can allow your command to be used by bots when you are setting it up on the dashboard by checking **Allow Bots** to true!
+
+## Interfacing with Modulo
+
+<aside class="warning">
+Interfacing with Modulo is a custom feature request and you will need to get in contact with NovusTheory for access to it from your JavaScript API
+</aside>
+<aside class="notice">
+This part of the API has not been finished yet
+</aside>
+
+Modulo provides a set of methods that you can use to initiate functions on Modulo's behalf. These functions could include banning a user, muting a user, and etc.
+
+# Message
+
+A message is a class in JavaScript dealing with a commands message. Use this to get information about the message which intitiate your command, such as the [Author](#user).
+
+## Author
+
+```javascript
+var author = message.Author;
+```
+
+This property returns a [User](#user) class.
+
+## Channel
+
+```javascript
+var channel = message.Channel;
+```
+
+This property returns a [Channel](#channel) class.
+
+## DeleteAsync
+
+> This method can throw errors
+
+```javascript
+message.DeleteAsync();
+```
+
+Deletes the message
+
+# User
+
+A User is a class in JavaScript dealing with a user on Discord. This class will expose information about a user to you in your script.
+
+## IsBot
+
+```javascript
+var bot = user.IsBot;
+```
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+This property will always be false unless bots are allowed to execute your command
 </aside>
 
-# Kittens
+This property returns a boolean set to true if the user is a bot, likewise it will return false for the opposite.
 
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
+## Id
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+var id = user.Id;
 ```
 
-> The above command returns JSON structured like this:
+This property returns a ulong value of the users id.
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
+## Game
 
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
+> This property can return null
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+var game = user.Game;
 ```
 
-> The above command returns JSON structured like this:
+This property returns a string of the users current game.
 
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
+## Discriminator
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+var discriminator = user.Discriminator;
 ```
 
-> The above command returns JSON structured like this:
+This property returns a ushort value of the users discriminator.
 
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
+## Username
+
+```javascript
+var username = user.Username;
 ```
 
-This endpoint retrieves a specific kitten.
+This property returns a string value of the users username.
 
-### HTTP Request
+## AvatarId
 
-`DELETE http://example.com/kittens/<ID>`
+```javascript
+var avatarId = user.AvatarId;
+```
 
-### URL Parameters
+This property returns a string of the users avatar id.
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
+## RoleIds
 
+> This property doesn't exist on users not pulled from a guild
+
+```javascript
+var roleIDs = user.RoleIds;
+```
+
+This property returns an array of ulong values of the users current roles.
+
+It is most common to see this property on users when they derive from guild events. Such as the [Message](#message) class which can contain a user derived from a guild if the message was sent in one.
+
+# Channel
+
+## SendMessageAsync
+
+```javascript
+var message = channel.SendMessageAsync("Hello World!");
+```
+
+> An alternative to send an embed instead
+
+```javascript
+var embed = new Embed();
+// Fill in embed
+var message = channel.SendMessageAsync(embed)
+```
+
+This method has two overloads, one which can send an [Embed](#embed), and the other which is a string.
+
+# Embed
+
+## Title
+
+```javascript
+embed.Title = "Embed Title";
+```
+
+This property sets or gets the title of an embed.
+
+## Description
+
+```javascript
+embed.Description = "Embed Description";
+```
+
+This property sets or gets the description of an embed.
+
+## Color
+
+```javascript
+embed.Color = new Color(255, 0, 0);
+```
+
+This property sets or gets the color of an embed. This property is a [Color](#color-2) class and requires it to be set as one.
+
+## AddField
+
+```javascript
+embed.AddField("Key", "Value");
+```
+
+This methods adds a field to an embed.
+
+## AddInlineField
+
+```javascript
+embed.AddInlineField("Key", "Value");
+```
+
+This method adds an inline field to an embed.
+
+# Color
+
+## R
+
+```javascript
+var r = color.R;
+```
+
+This property returns the red value of a color;
+
+## G
+
+```javascript
+var g = color.G;
+```
+
+This property returns the green value of a color;
+
+## B
+
+```javascript
+var b = color.B;
+```
+
+This property returns the blue value of a color;
