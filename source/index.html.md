@@ -87,7 +87,7 @@ This property returns a [User](#user) class.
 var channel = message.Channel;
 ```
 
-This property returns a [Channel](#channel) class.
+This property returns a [Channel](#channel-2) class.
 
 ## DeleteAsync
 
