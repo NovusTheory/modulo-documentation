@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,9 +211,6 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
@@ -223,278 +220,251 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Delete a Specific Kitten</a>
+                    <a href="#faq" class="toc-h2 toc-link" data-title="Introduction">FAQ</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#formatting" class="toc-h1 toc-link" data-title="Formatting">Formatting</a>
+          </li>
+          <li>
+            <a href="#discord" class="toc-h1 toc-link" data-title="Discord">Discord</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#command-callback" class="toc-h2 toc-link" data-title="Discord">Command Callback</a>
+                  </li>
+                  <li>
+                    <a href="#bots" class="toc-h2 toc-link" data-title="Discord">Bots</a>
+                  </li>
+                  <li>
+                    <a href="#interfacing-with-modulo" class="toc-h2 toc-link" data-title="Discord">Interfacing with Modulo</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#message" class="toc-h1 toc-link" data-title="Message">Message</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#author" class="toc-h2 toc-link" data-title="Message">Author</a>
+                  </li>
+                  <li>
+                    <a href="#channel" class="toc-h2 toc-link" data-title="Message">Channel</a>
+                  </li>
+                  <li>
+                    <a href="#deleteasync" class="toc-h2 toc-link" data-title="Message">DeleteAsync</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#isbot" class="toc-h2 toc-link" data-title="User">IsBot</a>
+                  </li>
+                  <li>
+                    <a href="#id" class="toc-h2 toc-link" data-title="User">Id</a>
+                  </li>
+                  <li>
+                    <a href="#game" class="toc-h2 toc-link" data-title="User">Game</a>
+                  </li>
+                  <li>
+                    <a href="#discriminator" class="toc-h2 toc-link" data-title="User">Discriminator</a>
+                  </li>
+                  <li>
+                    <a href="#username" class="toc-h2 toc-link" data-title="User">Username</a>
+                  </li>
+                  <li>
+                    <a href="#avatarid" class="toc-h2 toc-link" data-title="User">AvatarId</a>
+                  </li>
+                  <li>
+                    <a href="#roleids" class="toc-h2 toc-link" data-title="User">RoleIds</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#channel-2" class="toc-h1 toc-link" data-title="Channel">Channel</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#sendmessageasync" class="toc-h2 toc-link" data-title="Channel">SendMessageAsync</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#embed" class="toc-h1 toc-link" data-title="Embed">Embed</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#title" class="toc-h2 toc-link" data-title="Embed">Title</a>
+                  </li>
+                  <li>
+                    <a href="#description" class="toc-h2 toc-link" data-title="Embed">Description</a>
+                  </li>
+                  <li>
+                    <a href="#color" class="toc-h2 toc-link" data-title="Embed">Color</a>
+                  </li>
+                  <li>
+                    <a href="#addfield" class="toc-h2 toc-link" data-title="Embed">AddField</a>
+                  </li>
+                  <li>
+                    <a href="#addinlinefield" class="toc-h2 toc-link" data-title="Embed">AddInlineField</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#color-2" class="toc-h1 toc-link" data-title="Color">Color</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#r" class="toc-h2 toc-link" data-title="Color">R</a>
+                  </li>
+                  <li>
+                    <a href="#g" class="toc-h2 toc-link" data-title="Color">G</a>
+                  </li>
+                  <li>
+                    <a href="#b" class="toc-h2 toc-link" data-title="Color">B</a>
+                  </li>
+              </ul>
           </li>
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<aside class="notice">
+In order to have JavaScript commands you must talk to NovusTheory
+</aside>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Welcome to the JavaScript API for Custom Commands in Modulo!</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>There is three key things you should know while you are programming custom commands for Modulo.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ol>
+<li>All scripts are reviewed before they are allowed to be in use.</li>
+<li>All scripts must abide by a <a href="#script-rules">strict format</a>.</li>
+</ol>
+<h2 id='faq'>FAQ</h2>
+<p><em>Why are all scripts reviewed?</em>: <strong>Although scripts are enabled by asking for it. All scripts must go under review to prevent malicious actions and follow a set of rules</strong></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p><em>Will reviewing ever be removed?</em>: <strong>In the future reviewing of scripts might be removed when sandboxing and more restrictions have been put in place</strong></p>
+<h1 id='formatting'>Formatting</h1>
+<p>When programming custom commands, you must program to a specific format</p>
+<pre class="highlight javascript tab-javascript"><code><span class="c1">// You cannot have code above this line unless they are functions</span>
+<span class="nx">discord</span><span class="p">.</span><span class="nx">OnCommand</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="c1">// You cannot have code below this line</span>
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>The example code on the shown is how you should structure your code, otherwise it will be rejected for not following the formatting rules</p>
+<h1 id='discord'>Discord</h1><h2 id='command-callback'>Command Callback</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">discord</span><span class="p">.</span><span class="nx">OnCommand</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Message</span> <span class="nx">message</span><span class="p">,</span> <span class="nb">Array</span> <span class="nx">arguments</span><span class="p">)</span> <span class="p">{</span>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<span class="p">};</span>
+</code></pre>
+<p>You can connect to your command callback by assigning OnCommand to a function which will be called when your command is executed. A custom class <a href="#message">Message</a> will be returned along with an array of arguments excluding the command itself will be passed.</p>
+<h2 id='bots'>Bots</h2>
+<aside class="warning">
+If this option is enabled you must check for messages by bots in your command, otherwise your script will be rejected
+</aside>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>By default all commands are not allowed to be run by bots. However, you can allow your command to be used by bots when you are setting it up on the dashboard by checking <strong>Allow Bots</strong> to true!</p>
+<h2 id='interfacing-with-modulo'>Interfacing with Modulo</h2>
+<aside class="warning">
+Interfacing with Modulo is a custom feature request and you will need to get in contact with NovusTheory for access to it from your JavaScript API
+</aside>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+This part of the API has not been finished yet
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<p>Modulo provides a set of methods that you can use to initiate functions on Modulo&#39;s behalf. These functions could include banning a user, muting a user, and etc.</p>
+<h1 id='message'>Message</h1>
+<p>A message is a class in JavaScript dealing with a commands message. Use this to get information about the message which intitiate your command, such as the <a href="#user">Author</a>.</p>
+<h2 id='author'>Author</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">author</span> <span class="o">=</span> <span class="nx">message</span><span class="p">.</span><span class="nx">Author</span><span class="p">;</span>
 </code></pre>
+<p>This property returns a <a href="#user">User</a> class.</p>
+<h2 id='channel'>Channel</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">channel</span> <span class="o">=</span> <span class="nx">message</span><span class="p">.</span><span class="nx">Channel</span><span class="p">;</span>
+</code></pre>
+<p>This property returns a <a href="#channel">Channel</a> class.</p>
+<h2 id='deleteasync'>DeleteAsync</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>This method can throw errors</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<pre class="highlight javascript tab-javascript"><code><span class="nx">message</span><span class="p">.</span><span class="nx">DeleteAsync</span><span class="p">();</span>
+</code></pre>
+<p>Deletes the message</p>
+<h1 id='user'>User</h1>
+<p>A User is a class in JavaScript dealing with a user on Discord. This class will expose information about a user to you in your script.</p>
+<h2 id='isbot'>IsBot</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">bot</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">IsBot</span><span class="p">;</span>
+</code></pre>
+<aside class="notice">
+This property will always be false unless bots are allowed to execute your command
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>This property returns a boolean set to true if the user is a bot, likewise it will return false for the opposite.</p>
+<h2 id='id'>Id</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">Id</span><span class="p">;</span>
+</code></pre>
+<p>This property returns a ulong value of the users id.</p>
+<h2 id='game'>Game</h2>
+<blockquote>
+<p>This property can return null</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">game</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">Game</span><span class="p">;</span>
+</code></pre>
+<p>This property returns a string of the users current game.</p>
+<h2 id='discriminator'>Discriminator</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">discriminator</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">Discriminator</span><span class="p">;</span>
+</code></pre>
+<p>This property returns a ushort value of the users discriminator.</p>
+<h2 id='username'>Username</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">username</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">Username</span><span class="p">;</span>
+</code></pre>
+<p>This property returns a string value of the users username.</p>
+<h2 id='avatarid'>AvatarId</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">avatarId</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">AvatarId</span><span class="p">;</span>
+</code></pre>
+<p>This property returns a string of the users avatar id.</p>
+<h2 id='roleids'>RoleIds</h2>
+<blockquote>
+<p>This property doesn&#39;t exist on users not pulled from a guild</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">roleIDs</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">RoleIds</span><span class="p">;</span>
+</code></pre>
+<p>This property returns an array of ulong values of the users current roles.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p>It is most common to see this property on users when they derive from guild events. Such as the <a href="#message">Message</a> class which can contain a user derived from a guild if the message was sent in one.</p>
+<h1 id='channel-2'>Channel</h1><h2 id='sendmessageasync'>SendMessageAsync</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">channel</span><span class="p">.</span><span class="nx">SendMessageAsync</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">);</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>An alternative to send an embed instead</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">embed</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Embed</span><span class="p">();</span>
+<span class="c1">// Fill in embed</span>
+<span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">channel</span><span class="p">.</span><span class="nx">SendMessageAsync</span><span class="p">(</span><span class="nx">embed</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<p>This method has two overloads, one which can send an <a href="#embed">Embed</a>, and the other which is a string.</p>
+<h1 id='embed'>Embed</h1><h2 id='title'>Title</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">embed</span><span class="p">.</span><span class="nx">Title</span> <span class="o">=</span> <span class="s2">"Embed Title"</span><span class="p">;</span>
+</code></pre>
+<p>This property sets or gets the title of an embed.</p>
+<h2 id='description'>Description</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">embed</span><span class="p">.</span><span class="nx">Description</span> <span class="o">=</span> <span class="s2">"Embed Description"</span><span class="p">;</span>
+</code></pre>
+<p>This property sets or gets the description of an embed.</p>
+<h2 id='color'>Color</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">embed</span><span class="p">.</span><span class="nx">Color</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</code></pre>
+<p>This property sets or gets the color of an embed. This property is a <a href="#color-2">Color</a> class and requires it to be set as one.</p>
+<h2 id='addfield'>AddField</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">embed</span><span class="p">.</span><span class="nx">AddField</span><span class="p">(</span><span class="s2">"Key"</span><span class="p">,</span> <span class="s2">"Value"</span><span class="p">);</span>
+</code></pre>
+<p>This methods adds a field to an embed.</p>
+<h2 id='addinlinefield'>AddInlineField</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">embed</span><span class="p">.</span><span class="nx">AddInlineField</span><span class="p">(</span><span class="s2">"Key"</span><span class="p">,</span> <span class="s2">"Value"</span><span class="p">);</span>
+</code></pre>
+<p>This method adds an inline field to an embed.</p>
+<h1 id='color-2'>Color</h1><h2 id='r'>R</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">color</span><span class="p">.</span><span class="nx">R</span><span class="p">;</span>
+</code></pre>
+<p>This property returns the red value of a color;</p>
+<h2 id='g'>G</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">color</span><span class="p">.</span><span class="nx">G</span><span class="p">;</span>
+</code></pre>
+<p>This property returns the green value of a color;</p>
+<h2 id='b'>B</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">color</span><span class="p">.</span><span class="nx">B</span><span class="p">;</span>
+</code></pre>
+<p>This property returns the blue value of a color;</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
