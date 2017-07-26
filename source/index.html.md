@@ -15,7 +15,7 @@ In order to have JavaScript commands you must talk to NovusTheory
 
 Welcome to the JavaScript API for Custom Commands in Modulo!
 
-There is three key things you should know while you are programming custom commands for Modulo.
+There is two key things you should know while you are programming custom commands for Modulo.
 
 1. All scripts are reviewed before they are allowed to be in use.
 2. All scripts must abide by a [strict format](#script-rules).
